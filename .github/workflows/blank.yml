@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: eyexing_build
 
 # Controls when the workflow will run
@@ -21,30 +19,19 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout-master
       - uses: actions/checkout@v3
-      - name: npm install
+      - name: install dep
         run: npm install
       - name: npm build
         run: npm run build:prod
       
       - name: copy dist file with scp
-        uses: appleboy/scp-action@v0.0.1
-        width: 
-          host: '112.124.105.206'
-          username: 'root'
-          password: 'zqs.890425'
+        uses: appleboy/scp-action@master
+        with: 
+          host: ${{ secrets.ROOTHOST }}
+          username: ${{ secrets.ROOTUSER }}
+          password: ${{ secrets.ROOTPASSWORD }}
           port: 22
-          source: 'dist/'
+          source: 'dist/*'
           target: '/home/dist/'
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+    
