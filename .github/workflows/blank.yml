@@ -35,6 +35,6 @@ jobs:
           username: ${{ secrets.ROOTUSER }}
           password: ${{ secrets.ROOTPASSWORD }}
           port: 22
-          source: 'dist/'
+          source: 'dist/*'
           target: '/home/dist/'
     
