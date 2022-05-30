@@ -37,5 +37,5 @@ jobs:
           port: 22
           source: 'admin/*'
           target: '/home/nodeYog/eyexing/app/view/'
-          # script:  |
-          #   pm2 restart yarn
+          script:  |
+            pm2 reload yarn

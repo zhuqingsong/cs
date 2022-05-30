@@ -34,7 +34,6 @@
                             </el-form-item>
                         </el-col>
 
-
                         <el-col :span="24">
                             <el-form-item label="书籍简介" label-width="100px" prop="bookinfo">
                             <el-input
