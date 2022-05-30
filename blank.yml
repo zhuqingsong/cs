@@ -30,8 +30,8 @@ jobs:
         uses: appleboy/scp-action@v0.0.1
         width: 
           host: '112.124.105.206'
-          username: 'root'
-          password: 'zqs.890425'
+          username: ${{ secrets.ROOTUSERNAME }}
+          password: ${{ secrets.ROOTPASSWORD }}
           port: 22
           source: 'dist/'
           target: '/home/dist/'
