@@ -29,8 +29,8 @@ jobs:
       - name: copy dist file with scp
         uses: appleboy/scp-action@v0.0.1
         width: 
-          host: '112.124.105.206'
-          username: ${{ secrets.ROOTUSERNAME }}
+          host: ${{ secrets.ROOTHOST }}
+          username: ${{ secrets.ROOTUSER }}
           password: ${{ secrets.ROOTPASSWORD }}
           port: 22
           source: 'dist/'
