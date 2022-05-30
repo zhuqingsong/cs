@@ -36,6 +36,9 @@ jobs:
           password: ${{ secrets.ROOTPASSWORD }}
           port: 22
           source: 'admin/*'
-          target: '/home/nodeYog/eyexing/app/view/'
-          script:  |
-            pm2 reload yarn
+          target: ${{ secrets.ROOTPATH }}
+          # script:  |
+          #   pm2 reload yarn
+      - name: reload pm2 server
+        run: |
+          pm2 restart yarn
