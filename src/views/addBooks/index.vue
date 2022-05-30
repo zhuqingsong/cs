@@ -21,6 +21,8 @@
                                 <el-input  size="small" v-model="books.bookid" autocomplete="off"></el-input>
                             </el-form-item>
                         </el-col>
+                        <el-col :span="14"> 
+                                以书名首字母简称(例如: 四圣心源(ssxy_001) 同名加编号(ssxy_002)) </el-col>
                         <el-col :span="24">
                             <el-form-item label="作者" label-width="100px" prop="author" required>
                                     <el-input  size="small" v-model="books.author" autocomplete="off"></el-input>
@@ -31,8 +33,7 @@
                                     <el-input  size="small" v-model="books.times" autocomplete="off"></el-input>
                             </el-form-item>
                         </el-col>
-                        <el-col :span="14"> 
-                                以书名首字母简称(例如: 四圣心源(ssxy_001) 同名加编号(ssxy_002)) </el-col>
+
 
                         <el-col :span="24">
                             <el-form-item label="书籍简介" label-width="100px" prop="bookinfo">
