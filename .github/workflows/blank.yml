@@ -27,7 +27,7 @@ jobs:
       
       - name: copy dist file with scp
         uses: appleboy/scp-action@master
-        width: 
+        with: 
           host: ${{ secrets.ROOTHOST }}
           username: ${{ secrets.ROOTUSER }}
           password: ${{ secrets.ROOTPASSWORD }}
