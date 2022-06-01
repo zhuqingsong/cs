@@ -134,6 +134,8 @@ export default {
          checkBookNameIsRepeat({bookname: value}).then(rs=>{
              if(rs.code==1 && rs.data.length>0){
                 callback(new Error());
+             }else{
+                 callback();
              }
          })
      },
