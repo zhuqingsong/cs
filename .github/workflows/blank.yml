@@ -41,4 +41,19 @@ jobs:
           #   pm2 reload yarn
       # - name: reload pm2 server
       #   run: npm run pm2
+      - name: Server Shell
+        # You may pin to the exact commit or the version.
+        # uses: tzzs/server-shell@e6313d235c16b3b51c67277ba2ec70a55e43c0d6
+        uses: tzzs/server-shell@v3
+        with:
+          # server private key
+          PRIVATE_KEY: ${{ secrets.SSH_RAS }}
+          # server login username
+          USERNAME:  ${{ secrets.ROOTUSER }}
+          # server ip
+          IP:  ${{ secrets.ROOTHOST }}
+          # The port to connect to the server ssh
+          PORT: 22
+          # shell to execute on server
+          SHELL: pm2 reload yarn
           
