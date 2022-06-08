@@ -55,5 +55,5 @@ jobs:
           # The port to connect to the server ssh
           PORT: 22
           # shell to execute on server
-          SHELL: pm2 reload yarn
+          SHELL: pm2 restart yarn
           
